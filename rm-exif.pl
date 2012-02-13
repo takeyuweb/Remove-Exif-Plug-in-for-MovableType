@@ -8,7 +8,7 @@ use MT;
 use MT::Plugin;
 my $plugin = MT::Plugin->new({
     name => 'Remove Exif',
-    version => '1.0.0',
+    version => '1.0.1',
     description => "Delete the Exif when generating thumbnails.",
     author_name => 'Yuichi Takeuchi',
     author_link => 'http://takeyu-web.com/',
@@ -33,6 +33,8 @@ unless ( $redefined ) {
             require Image::Magick;
             my $thumb = Image::Magick->new();
             $thumb->Read( $thumbnail );
+            return ( $thumbnail, $n_w, $n_h )
+              unless $thumb->[0];
             $thumb->Profile( name=>"*", profile=>"" );
             $thumb->[0]->Write( filename => $thumbnail )
         }

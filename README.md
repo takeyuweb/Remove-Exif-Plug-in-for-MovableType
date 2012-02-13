@@ -1,7 +1,7 @@
 # Remove Exif Plug-in for MovableType
 * Author:: Yuichi Takeuchi <uzuki05@takeyu-web.com>
 * Website:: http://takeyu-web.com/
-* Copyright:: Copyright 2011 Yuichi Takeuchi
+* Copyright:: Copyright 2011-2012 Yuichi Takeuchi
 * License:: MIT-License
 
 pluginsディレクトリに配置すると、アセットのサムネイル生成の際にExif情報を削除するようになります。
